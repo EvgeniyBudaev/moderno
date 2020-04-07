@@ -1,6 +1,6 @@
-@import '_vars';
-@import '_global';
-@import '_fonts';
+@import "_vars";
+@import "_global";
+@import "_fonts";
 
 // section header
 .header__top-inner {
@@ -46,10 +46,10 @@
       margin-left: 30px;
     }
   }
-   a {
-     color: #fff;
-     font-size: 14px;
-   }
+  a {
+    color: #fff;
+    font-size: 14px;
+  }
 }
 // end section header
 
@@ -109,3 +109,113 @@
   }
 }
 // end section search
+
+// section products
+.products {
+  padding: 110px 0px;
+  background-color: $grey;
+}
+.products__inner-btn {
+  text-align: center;
+  margin-bottom: 60px;
+  button {
+    padding: 12px 21px;
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    cursor: pointer;
+    & + button {
+      margin-left: 5px;
+    }
+    &.mixitup-control-active {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+.products__inner-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product__item {
+  max-width: 442px;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+  margin-bottom: 30px;
+  &-img {
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    min-height: 90px;
+    font-weight: 500;
+    border-bottom: 1px solid #e7ecf2;
+  }
+  &-name {
+    max-width: 310px;
+  }
+  &-title {
+    color: $bg;
+    font-size: 18px;
+    display: block;
+  }
+  &-category {
+    font-size: 14px;
+    color: $green;
+    display: block;
+  }
+  &-price {
+    font-size: 20px;
+    color: $bg;
+    font-weight: 700;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  &-author {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      margin-right: 14px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+.products__bottom-btn {
+  text-align: center;
+  button {
+    margin: 45px 5px 0;
+    padding: 20px 30px;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    cursor: pointer;
+    &.mixitup-control-active {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+// end section products
