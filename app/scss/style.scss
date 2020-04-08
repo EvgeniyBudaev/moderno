@@ -2,7 +2,7 @@
 @import "_global";
 @import "_fonts";
 
-// section header
+// start section header
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@
 }
 // end section header
 
-// section search
+// start section search
 .search {
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +110,7 @@
 }
 // end section search
 
-// section products
+// start section products
 .products {
   padding: 110px 0px;
   background-color: $grey;
@@ -186,6 +186,7 @@
   &-author {
     display: flex;
     align-items: center;
+    max-width: 245px;
     .avatar {
       width: 30px;
       height: 30px;
@@ -199,6 +200,12 @@
     span {
       font-size: 14px;
       font-weight: 500;
+    }
+  }
+  &-star {
+    font-size: 12px;
+    span {
+      color: $bg;
     }
   }
 }
@@ -219,3 +226,33 @@
   }
 }
 // end section products
+
+// start section product-slider
+.product-slider {
+  padding: 110px 0px 120px;
+  .slick-dots {
+    text-align: center;
+    margin-top: 50px;
+    li {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+      &.slick-active {
+        button {
+          background-color: $green;
+        }
+      }
+      button {
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        border: none;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
+// end section product-slider
