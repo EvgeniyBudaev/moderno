@@ -14,6 +14,10 @@
   margin-right: 50px;
   span {
     color: $red;
+    transition: all 0.3s;
+  }
+  span:hover {
+    color: #c54335;
   }
 }
 .header__btn {
@@ -26,10 +30,18 @@
 }
 .header__btn-login {
   background-color: $green;
+  transition: all 0.3s;
+}
+.header__btn-login:hover {
+  background-color: #6b943c;
 }
 .header__btn-register {
   background-color: $red;
   margin-left: 7px;
+  transition: all 0.3s;
+}
+.header__btn-register:hover {
+  background-color: #c54335;
 }
 .header__menu {
   background-color: $bg;
@@ -49,6 +61,10 @@
   a {
     color: #fff;
     font-size: 14px;
+    transition: all 0.3s;
+  }
+  a:hover {
+    color: $green;
   }
 }
 // end section header
@@ -132,6 +148,7 @@
     border: none;
     background-color: #fff;
     color: $bg;
+    transition: all 0.2s;
     cursor: pointer;
     & + button {
       margin-left: 5px;
@@ -140,6 +157,10 @@
       background-color: $red;
       color: #fff;
     }
+  }
+  .button:hover {
+    background-color: #ccc;
+    color: #fff;
   }
 }
 .products__inner-box {
@@ -152,6 +173,10 @@
   width: 100%;
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin-bottom: 30px;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
   &-img {
     min-height: 250px;
     background-repeat: no-repeat;
@@ -228,10 +253,15 @@
     background-color: #fff;
     color: $bg;
     cursor: pointer;
+    transition: all .3s;
     &.mixitup-control-active {
       background-color: $red;
       color: #fff;
     }
+  }
+  .button:hover {
+    background-color: #ccc;
+    color: #fff;
   }
 }
 // end section products
