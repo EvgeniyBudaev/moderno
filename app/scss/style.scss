@@ -3,6 +3,9 @@
 @import "_fonts";
 
 // start section header
+.header {
+  background-color: #fff;
+}
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -115,6 +118,7 @@
   }
 }
 .basket {
+  margin-right: 20px;
   span {
     background-color: $green;
   }
@@ -129,7 +133,6 @@
   }
 }
 .user {
-  margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
   position: relative;
@@ -197,6 +200,7 @@
   overflow: hidden;
   border-top: 1px solid #e0e0e0;
   transition: all 0.3s;
+  z-index: 1;
 }
 .user__box,
 .basket__box,
@@ -317,6 +321,10 @@
 }
 .icons-color::before {
   color: $tomato;
+}
+.header__btn-menu,
+.menu__btn {
+  display: none;
 }
 // end section header
 
@@ -1176,3 +1184,5 @@ button.icon-unsorted {
 }
 
 //end product-page
+
+@import "_media";
