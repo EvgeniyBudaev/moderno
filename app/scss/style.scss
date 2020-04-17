@@ -347,7 +347,7 @@
     width: 100%;
     &::before {
       position: absolute;
-      font-family: 'icomoon';
+      font-family: "icomoon";
       font-size: 14px;
       color: #fff;
       left: 18px;
@@ -355,10 +355,10 @@
     }
   }
   .login__label-name::before {
-    content: '\f007';
+    content: "\f007";
   }
   .login__label-pass::before {
-    content: '\f023';
+    content: "\f023";
   }
   input {
     height: 43px;
@@ -404,21 +404,21 @@
   font-size: 18px;
 }
 .create-acc {
-    margin-top: 19px;
-    padding: 15px 0 15px 28px;
-    text-align: center;
-    width: 245px;
-    background-color: #76ae36;
-    color: #fff;
-    font-size: 18px;
-    position: relative;
-    &::before {
-      content: '\f044';
-      position: absolute;
-      top: 15px;
-      left: 35px;
-      font-family: 'icomoon';
-    }
+  margin-top: 19px;
+  padding: 15px 0 15px 28px;
+  text-align: center;
+  width: 245px;
+  background-color: #76ae36;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  &::before {
+    content: "\f044";
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    font-family: "icomoon";
+  }
 }
 .fancybox-button svg path {
   color: #fff;
@@ -1489,7 +1489,7 @@ button.icon-unsorted {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     text-align: center;
     display: block;
     padding: 17px 5px 15px;
@@ -1497,7 +1497,7 @@ button.icon-unsorted {
     cursor: pointer;
     &::before {
       font-weight: 400;
-      font-family: 'icomoon';
+      font-family: "icomoon";
       padding-right: 8px;
     }
   }
@@ -1524,7 +1524,7 @@ button.icon-unsorted {
   color: #707070;
   font-size: 13px;
   padding: 6px 9px 5px;
-  border: 1px solid #d5d5d5; 
+  border: 1px solid #d5d5d5;
 }
 .author__awards-list {
   li {
@@ -1578,11 +1578,11 @@ button.icon-unsorted {
     color: #263238;
     padding-right: 13px;
     &::before {
-      content: '\f07a';
+      content: "\f07a";
       color: #a6b5bb;
       padding-right: 20px;
-      font-family: 'icomoon';
-    }   
+      font-family: "icomoon";
+    }
   }
 }
 .aside__item.sales-number {
@@ -1602,13 +1602,15 @@ button.icon-unsorted {
 
 // start 404
 .page-404__wrapper,
-.about__wrapper {
+.about__wrapper,
+.contact__wrapper {
   border: 1px solid #dcdcdc;
   background-color: #fff;
   margin-bottom: 150px;
 }
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
   font-size: 24px;
   color: #444444;
   @include f500;
@@ -1621,7 +1623,7 @@ button.icon-unsorted {
   color: #fff;
 }
 .page-404__404 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 300px;
   padding-top: 70px;
@@ -1629,7 +1631,7 @@ button.icon-unsorted {
   line-height: 300px;
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-image: url(../images/content/page-404.png);
     width: 150px;
@@ -1676,5 +1678,118 @@ button.icon-unsorted {
   }
 }
 // end about
+
+// start contact
+.contact__head {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.contact__inner {
+  padding: 35px 40px 15px;
+}
+.contact__map {
+  margin-bottom: 50px;
+  iframe {
+    width: 100%;
+    height: 415px;
+  }
+}
+.contact__box {
+  display: flex;
+}
+.contact__info {
+  margin-right: 30px;
+  max-width: 330px;
+  width: 100%;
+}
+.contact__info-item {
+  margin-bottom: 30px;
+}
+.contact__info-title {
+  padding-bottom: 20px;
+  position: relative;
+  font-size: 20px;
+  @include f500;
+  color: $bg;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 4px;
+    background-color: $green;
+    left: 40px;
+    bottom: 0;
+  }
+  &::before {
+    color: $green;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+  }
+}
+.contact__info-content {
+  padding-left: 40px;
+  color: #707070;
+  max-width: 230px;
+}
+.contact__form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  @include f500;
+  color: #333;
+}
+.contact__form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__form {
+  width: 100%;
+  input,
+  textarea,
+  button {
+    border: none;
+  }
+  input,
+  textarea {
+    display: block;
+    background-color: #f1f4f5;
+  }
+
+  input {
+    height: 43px;
+    width: 350px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 30px;
+    &::placeholder {
+      font-size: 15px;
+      color: #7a7a7a;
+    }
+  }
+  textarea {
+    padding: 13px 17px;
+    height: 190px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 23px;
+    &::placeholder {
+      font-size: 15px;
+      color: #7a7a7a;
+    }
+  }
+  button {
+    background-color: $green;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    @include f700;
+    color: #fff;
+    padding: 20px 5px;
+    width: 190px;
+  }
+}
+// end contact
 
 @import "_media";
