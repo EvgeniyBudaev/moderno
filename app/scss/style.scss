@@ -1341,12 +1341,24 @@ button.icon-unsorted {
 }
 .link-live {
   background-color: $red;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #c24132;
+  }
 }
 .link-screenshots {
   background-color: #455a64;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #313e44;
+  }
 }
 .link-documentation {
   background-color: $green;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #6b943c;
+  }
 }
 .product-one__social {
   a {
@@ -1441,8 +1453,13 @@ button.icon-unsorted {
     color: #70838d;
     padding: 20px 0;
     cursor: pointer;
+    transition: all .3s;
     & + .tab {
       border-left: 1px solid #d7d7d7;
+    }
+    &:hover {
+      background-color: #d7d7d7;
+      color: #000;
     }
   }
 }
@@ -1473,7 +1490,51 @@ button.icon-unsorted {
 .price__box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px 0px;
+  select {
+    width: 100%;
+    display: block;
+    border: 1px solid #dedede;
+    height: 26px;
+    background-color: #f9f9f9;
+    color: #707070;
+  }
+  .jq-selectbox {
+    max-width: 84px;
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 26px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    text-shadow: none;
+    color: #707070;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    line-height: 26px;
+    &-text {
+      overflow: visible;
+    }
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    font-size: 13px;
+    line-height: 40px;
+    top: -6px;
+    right: 20px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+      color: $green;
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
 }
 .price__product {
   font-size: 22px;
@@ -1494,18 +1555,30 @@ button.icon-unsorted {
     display: block;
     padding: 17px 5px 15px;
     width: 100%;
+    transition: all 0.3s;
     cursor: pointer;
     &::before {
       font-weight: 400;
       font-family: "icomoon";
       padding-right: 8px;
     }
+    &:hover {
+      background-color: #49606b;
+    }
   }
   .icon-shopping-cart {
     background-color: $green;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #6b943c;
+    }
   }
   .icon-heart-o {
     background-color: #42a5f5;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #398dd1;
+    }
   }
 }
 .product-author__box {
@@ -1525,6 +1598,11 @@ button.icon-unsorted {
   font-size: 13px;
   padding: 6px 9px 5px;
   border: 1px solid #d5d5d5;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ccc;
+    color: #000;
+  }
 }
 .author__awards-list {
   li {
@@ -1788,6 +1866,11 @@ button.icon-unsorted {
     color: #fff;
     padding: 20px 5px;
     width: 190px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #6b943c;
+    }
   }
 }
 // end contact
@@ -1815,6 +1898,7 @@ button.icon-unsorted {
       color: #707070;
       font-size: 14px;
       @include f500;
+      transition: all 0.2s;
       &.active {
         border-bottom: 1px solid $green;
         color: #37474f;
@@ -1825,6 +1909,10 @@ button.icon-unsorted {
       &::before {
         left: 24px;
         color: #444;
+      }
+      &:hover {
+        background-color: #ccc;
+        opacity: 0.9;
       }
     }
   }
@@ -1861,24 +1949,43 @@ button.icon-unsorted {
     width: 260px;
     color: #444;
   }
+  select,
   input {
-    max-width: 540px;
     width: 100%;
+    display: block;
+    border: 1px solid #dedede;
     height: 40px;
     background-color: #f9f9f9;
-    color: #000;
-    border: 1px solid #dedede;
-    padding: 0px 10px;
-  }
-  select {
-    max-width: 540px;
-    width: 100%;
-    height: 40px;
-    background-color: #f9f9f9;
-    color: #000;
-    border: 1px solid #dedede;
-    padding: 0px 10px;
     color: #707070;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    text-shadow: none;
+    color: #707070;
+    font-family: "Roboto", sans-serif;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    font-size: 15px;
+    line-height: 40px;
+    top: 0;
+    right: 20px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
   }
 }
 //end settings
@@ -1943,12 +2050,16 @@ button.icon-unsorted {
   background-color: $text;
   box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
   position: relative;
+  transition: all 0.3s;
   &::before {
     content: "\f003";
     font-family: "icomoon";
     position: absolute;
     left: 50px;
     top: 17px;
+  }
+  &:hover {
+    background-color: #485e68;
   }
 }
 .profile__aside-following {
@@ -1961,6 +2072,10 @@ button.icon-unsorted {
   background-color: $green;
   box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
   padding: 18px 10px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #6b943c;
+  }
 }
 .profile__banner {
   padding: 20px;
@@ -2007,6 +2122,7 @@ button.icon-unsorted {
       font-weight: 500;
       color: #707070;
       position: relative;
+      transition: all 0.2s;
       &.active::before {
         color: $green;
       }
@@ -2017,6 +2133,10 @@ button.icon-unsorted {
         font-family: "icomoon";
         color: #d0d0d0;
         position: absolute;
+      }
+      &:hover {
+        background-color: #ccc;
+        opacity: 0.9;
       }
     }
   }
@@ -2068,5 +2188,141 @@ button.icon-unsorted {
   }
 }
 // end profile
+
+// start upload
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  button:hover {
+    background-color: #6b943c;
+  }
+}
+.upload__inner-title {
+  padding: 16px 35px 18px;
+  @include f500;
+  font-size: 24px;
+  color: $bg;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 40px;
+}
+.upload__inner-content {
+  margin-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 50px;
+}
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+  label {
+    min-width: 175px;
+    padding-top: 5px;
+    padding-right: 15px;
+    color: #444;
+    span {
+      color: $green;
+    }
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  input[type="file"] {
+    outline: none;
+  }
+  .jq-file {
+    width: 100%;
+    padding: 0px 18px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+  .jq-file__name {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom-color: none;
+    border-radius: 0;
+    padding: 0;
+    height: 40px;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+    margin-left: 100px;
+    outline: none;
+  }
+  .jq-file__browse {
+    top: 5px;
+    left: 9px;
+    right: auto;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    text-shadow: none;
+    box-shadow: none;
+    color: #444;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    text-shadow: none;
+    color: #707070;
+    font-family: "Roboto", sans-serif;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    font-size: 15px;
+    line-height: 40px;
+    top: 0;
+    right: 20px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+}
+
+// end upload
 
 @import "_media";
