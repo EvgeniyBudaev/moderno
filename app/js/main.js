@@ -77,7 +77,7 @@ $(function () {
     $('.header__box').toggleClass('active');
   });
 
-  
+  new WOW().init();
 
   var mixer = mixitup('.products__inner-box');
 
